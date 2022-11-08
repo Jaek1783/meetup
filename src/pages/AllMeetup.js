@@ -1,7 +1,7 @@
-const AllMeetup = ()=>{
+const AllMeetupPages = ()=>{
     return (
         <div>All meetups Pages</div>
     )
 };
 
-export default AllMeetup;
+export default AllMeetupPages;
