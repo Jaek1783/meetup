@@ -23,6 +23,7 @@ const DUMMY_DATA = [
 const AllMeetupPages = ()=>{
     return (
         <div>
+            <h2>AllMeetup</h2>
             <MeetupList meetups={DUMMY_DATA}/>
         </div>
     )
