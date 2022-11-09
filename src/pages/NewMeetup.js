@@ -9,7 +9,8 @@ const NewMeetupPage = ()=>{
         if(response.data){
             navigate('/');
         }
-    })};
+    })
+    };
     return <div>
         <h2>Add New Meetup</h2>
         <NewMeetupForm onAddMeetup={addMeetupHandler}/>
