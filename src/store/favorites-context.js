@@ -35,10 +35,11 @@ export const FavoritesContextProvider = (props)=>{
         removeFavorites:removeFavoritesHandler,
         itemsFavorites:itemsFavoritesHandler
     };
-
+return(
     <FavoritesContext.Provider value={context}>
         {props.children}
     </FavoritesContext.Provider>
-};
+)
+};  
 
 export default FavoritesContext;
