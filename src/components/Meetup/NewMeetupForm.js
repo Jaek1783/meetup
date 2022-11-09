@@ -36,15 +36,15 @@ const NewMeetupForm = (props)=>{
         <form className={modules.form} onSubmit={submitHandler}>
             <div className={modules.control}>
                 <label htmlFor="title">Meetup Title</label>
-                <input type="text" required id='title' ref={titleRef}/>
+                <input type="text" required id='title' ref={titleRef} placeholder='This is a first meetup'/>
             </div>
             <div className={modules.control}>
                 <label htmlFor="image">Meetup Image</label>
-                <input type="url" required id='image' ref={imageRef}/>
+                <input type="url" required id='image' ref={imageRef} placeholder='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg'/>
             </div>
             <div className={modules.control}>
                 <label htmlFor="address">Meetup address</label>
-                <input type="text" required id='address'ref={addressRef}/>
+                <input type="text" required id='address'ref={addressRef} placeholder='Meetupstreet 5, 12345 Meetup City'/>
             </div>
             <div className={modules.control}>
                 <label htmlFor="description">Description</label>
