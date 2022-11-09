@@ -1,14 +1,14 @@
 import Card from "../UI/Card";
 import modules from './NewMeetupForm.module.css';
 import {useRef} from 'react';
-import { useNavigate } from "react-router-dom";
+
 
 const NewMeetupForm = (props)=>{
     const titleRef = useRef(null);
     const imageRef = useRef(null);
     const addressRef = useRef(null);
     const descRef = useRef(null);
-    const navigate = useNavigate();
+
 
     const submitHandler = (event)=>{
         event.preventDefault();
@@ -29,8 +29,6 @@ const NewMeetupForm = (props)=>{
     imageRef.current.value='';
     addressRef.current.value='';
     descRef.current.value='';
-    navigate('/');
-
     };
     return <Card>
         <form className={modules.form} onSubmit={submitHandler}>
