@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import FavoritesContext from "../../store/favorites-context";
 const MainNavigation = ()=>{
+    const favoritesCtx = useContext(FavoritesContext);
+
     return(
         <header>
             <nav className="navbar navbar-expand-lg bg-danger">
@@ -17,7 +21,10 @@ const MainNavigation = ()=>{
                                 <Link to='/new-meetup' className="nav-link" href="#">Add Meetup Pages</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/favorites' className="nav-link" href="#">Favorites</Link>
+                                <Link to='/favorites' className="nav-link" href="#">
+                                    My Favorites
+                                    <span className="badge">{favoritesCtx.totalFavorites}</span>
+                                </Link>
                             </li>
                         </ul>
                     </div>
