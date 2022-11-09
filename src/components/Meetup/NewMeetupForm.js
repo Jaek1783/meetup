@@ -2,7 +2,7 @@ import Card from "../UI/Card";
 import modules from './NewMeetupForm.module.css';
 import {useRef} from 'react';
 
-const NewMeetupForm = ()=>{
+const NewMeetupForm = (props)=>{
     const titleRef = useRef(null);
     const imageRef = useRef(null);
     const addressRef = useRef(null);
@@ -21,7 +21,8 @@ const NewMeetupForm = ()=>{
         address:enterAddress,
         description:enterDesc
     };
-    console.log(meetupData);
+    // console.log(meetupData);
+    props.onAddMeetup(meetupData);
     };
     return <Card>
         <form className={modules.form} onSubmit={submitHandler}>
